@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sylius - eCommerce framework for tailored solutions</title>
+
+
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css"/>
+    <!--plugins-->
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="http://sylius.org/assets/css/owl.carousel.css"/>
+
+    <!--bySelf-->
+    <link rel="stylesheet" href="src/css/main.css"/>
+
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="bower_components/owlcarousel/owl-carousel/owl.carousel.min.js"></script>
+    <script src="src/js/script.js"></script>
+    <script>
+        $(window).on('scroll',function(){
+//            console.log('window`s scrollTop',$(this).scrollTop());
+            if($(this).scrollTop() >100){
+                $("#to-top").fadeIn();
+
+            } else{
+                $("#to-top").fadeOut();
+            }
+        });
+        $(function () {
+            $("#to-top").click(function () {
+                $('html,body').animate({scrollTop : 0},800);
+                return
+            });
+        });
+
+    </script>
+</head>
+<body>
+    <i class="fa fa-arrow-circle-up" id="to-top" style="display: inline"></i>
+    <div>
+        <header id="header" class="header">
+            <div class="top">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <p>Our blog:
+                                <a href="/blog/new-sylius-api-for-modern-ecommerce-web-apps-spa-pwa">New Sylius API For Modern eCommerce Web Apps (SPA/PWA)</a>
+                            </p>
+                        </div>
+
+                        <div class="col-md-4">
+                            <ul class="topbar-social">
+                                <li>
+                                    <a href="http://twitter.com/Sylius" target="_blank">
+                                        <i class="fa fa-twitter" aria-hidden="true"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="http://facebook.com/SyliusEcommerce">
+                                        <i class="fa fa-facebook" aria-hidden="true"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="http://linkedin.com/company/sylius" target="_blank">
+                                        <i class="fa fa-linkedin" aria-hidden="true"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="http://sylius.org/slack" target="_blank">
+                                        <i class="fa fa-slack" aria-hidden="true"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="http://github.com/Sylius/Sylius">
+                                        <i class="fa fa-github" aria-hidden="true"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="nav">
+                <div class="container">
+                    <div class="nav-header clearfix">
+                        <a class="nav-logo" href="/">
+                            <img src="src/img/logo/logo.svg" alt="" class="hidden-xs hidden-sm">
+                            <img src="src/img/logo/logo-dark.svg" alt="" class="visible-xs visible-sm">
+                        </a>
+
+                        <button type="button" class="nav-toggle" data-toggle="collapse"
+                                data-target="navbar-responsive-collapse">
+                            <!--<span class="sr-only">Toggle Navigation</span>-->
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                        <!--<div class="collapse navbar-collapse navbar-responsive-collapse">-->
+                            <!--<ul class="nav navbar-nav">-->
+                                <!--<li class="active">-->
+                                    <!--<a href="#"></a>-->
+                                <!--</li>-->
+                            <!--</ul>-->
+                        <!--</div>-->
+
+                    </div>
+
+                    <div class="nav-menu">
+                        <ul>
+                            <li class="has-submenu">
+                                <a href="/features/business">Features
+                                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                </a>
+                                <ul class="submenu">
+                                    <li>
+                                        <a href="/features/business" >Business</a>
+                                    </li>
+                                    <li>
+                                        <a href="/features/developer" >Developer</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a href="/services">Services</a>
+                            </li>
+
+                            <li class="has-submenu">
+                                <a href="/developers">Developers
+                                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                </a>
+                                <ul class="submenu">
+                                    <li>
+                                        <a href="/download"><strong>DOWNLOAD</strong></a>
+                                    </li>
+
+                                    <li>
+                                        <a href="/demo">Demo</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="http://docs.sylius.org" target="_blank">Documentation</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="http://docs.sylius.org/en/latest/contributing/index.html" target="_blank">Contribute</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="http://docs.sylius.org/en/latest/customization/index.html" target="_blank">Customize</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://translate.sylius.org" target="_blank">Translate</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="http://github.com/Sylius/Sylius/issues/new" target="_blank">Report a Bug</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="http://github.com/Sylius/Sylius/milestones" target="_blank">Roadmap</a>
+                                    </li>
+
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a href="/showcase">Showcase</a>
+                            </li>
+
+                            <li class="has-submenu">
+                                <a href="/partners/become-a-partner">Partners
+                                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                </a>
+                                <ul class="submenu">
+                                    <li>
+                                        <a href="/partners/become-a-partner" >Become a partner</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="has-submenu">
+                                <a href="/company">Company
+                                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                </a>
+                                <ul class="submenu">
+                                    <li>
+                                        <a href="/company#about">About</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="/company#team">Team</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="/contact">Contact</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a href="/blog">Blog</a>
+                            </li>
+
+                            <li>
+                                <a class="btn btn-success" href="/contact" ><strong>CONTACT US</strong></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <section class="section full-element">
+            <div class="overlay">
+                <div class="overlay-wrapper">
+                    <div class="overlay-inner bg-cover" style="background-image:url('src/img/yang12.jpg');"></div>
+                    <div class="overlay-inner opacity-60 bg-black"></div>
+                </div>
+            </div>
+
+            <div class="fullScreen-container">
+                <div class="fullScreen-content">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-7 col-lg-8">
+                                <h1 class="font">The first framework for tailored eCommerce solutions</h1>
+                            </div>
+                            <div class="col-md-7">
+                                <p class="lead">Sylius is an eCommerce technology that gives you full freedom to create an exceptional customer experience.
+                                    It integrates with your existing systems and guarantees fast time to market.</p>
+                            </div>
+                        </div>
+                        <a href="/download" class="btn btn-outline"><strong>DOWNLOAD</strong></a>
+                    </div>
+                </div>
+            </div>
+
+            <a href="#brand" class="go-down">
+                <i class="fa fa-angle-down" aria-hidden="true"></i>
+            </a>
+        </section>
+
+        <section id="brand" class="section">
+            <div class="container">
+                <h2 class="text-center xs-mb-30 sm-mb-50">These brands use Sylius already</h2>
+
+                <div class="row mr-0 ml-0 sm-mb-80">
+                    <div class="col-sm-6 col-md-3 pl-0 pr-0">
+                        <div class="brand-block">
+                            <div class="overlay">
+                                <div class="overlay-wrapper">
+                                    <div class="overlay-inner bg-cover" style="background-image: url('src/img/dong1.jpg');"></div>
+                                    <div class="overlay-inner bg-black opacity-50"></div>
+                                </div>
+                            </div>
+
+                            <div class="brand-overlay">
+                                <div class="overlay">
+                                    <div class="overlay-wrapper">
+                                        <div class="overlay-inner bg-green opacity-80"></div>
+                                    </div>
+                                </div>
+
+                                <div class="brand-content text-center">
+                                    <p class="font-white font-bold sm-mb-10 sm-mt-8">
+                                        A place where dreams come true. The traveler’s dreams of freedom, enjoyment, and inspiration.
+                                        This is your journey into a world of beauty, fashion and fabulous stories.
+                                        The sole mission of BestValue is to make it truly unforgettable.
+                                    </p>
+                                    <p class="font-white">BestValue</p>
+                                    <a href="http://bestvalue.eu" target="_blank" class="btn btn-sm btn-white">Visit website</a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-sm-6 col-md-3 pl-0 pr-0">
+                        <div class="brand-block">
+                            <div class="overlay">
+                                <div class="overlay-wrapper">
+                                    <div class="overlay-inner bg-cover" style="background-image: url('src/img/dong2.jpg');"></div>
+                                    <div class="overlay-inner bg-black opacity-50"></div>
+                                </div>
+                            </div>
+
+                            <div class="brand-overlay">
+                                <div class="overlay">
+                                    <div class="overlay-inner bg-green opacity-80"></div>
+                                </div>
+
+                                <div class="brand-content text-center">
+                                    <p class="font-white font-bold sm-mb-10">
+                                        HAVEP offers unique tailor-made work clothes for various sectors.
+                                        The apparel which is not only user-friendly and comfortable,
+                                        but also aesthetic and safe. Every collection is 100% certified with current EN and ISO norms complied.
+                                    </p>
+                                    <p class="font-white">Havep.com</p>
+                                    <a href="http://www.havep.com/en/our-products" class="btn btn-sm btn-white" target="_blank">Visit website</a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-sm-6 col-md-3 pl-0 pr-0">
+                        <div class="brand-block">
+                            <div class="overlay">
+                                <div class="overlay-wrapper">
+                                    <div class="overlay-inner bg-cover" style="background-image: url('src/img/dong3.jpg');"></div>
+                                    <div class="overlay-inner bg-black opacity-50"></div>
+                                </div>
+                            </div>
+
+                            <div class="brand-overlay">
+                                <div class="overlay">
+                                    <div class="overlay-inner bg-green opacity-80"></div>
+                                </div>
+
+                                <div class="brand-content text-center">
+                                    <p class="font-white font-bold sm-mb-10">
+                                        Must Have is a subscription box targeted toward women who want to be surprised
+                                        with full-sized products valued at over $100 every month for a reasonable $39.95.
+                                    </p>
+
+                                    <p class="font-white">POPSUGAR Must Have</p>
+                                    <a href="http://musthave.popsugar.com" target="_blank" class="btn btn-sm btn-white">Visit website</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-sm-6 col-md-3 pl-0 pr-0">
+                        <div class="brand-block">
+                            <div class="overlay">
+                                <div class="overlay-wrapper">
+                                    <div class="overlay-inner bg-cover" style="background-image: url('src/img/dong4.jpg');"></div>
+                                    <div class="overlay-inner bg-black opacity-50"></div>
+                                </div>
+                            </div>
+
+                            <div class="brand-overlay">
+                                <div class="overlay">
+                                    <div class="overlay-inner bg-green opacity-80"></div>
+                                </div>
+
+                                <div class="brand-content text-center">
+                                    <p class="font-white font-bold sm-mb-10">
+                                        Although founded only in 2012, HBX has already curated over 300 brands, which offer everything from
+                                        Apparel, Footwear, Accessories to Prints and Tech items.
+                                        The common value of all HBX’ brands is a creative design and refine construction.
+                                    </p>
+
+                                    <p class="font-white">hbx.com</p>
+
+                                    <a class="btn btn-sm btn-white" href="https://hbx.com" target="_blank">Visit website</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-sm-6 col-md-3 pl-0 pr-0">
+                        <div class="brand-block">
+                            <div class="overlay">
+                                <div class="overlay-inner bg-cover" style="background-image: url('src/img/yang2.jpg')"></div>
+                                <div class="overlay-inner bg-black opacity-50"></div>
+                            </div>
+
+                            <div class="brand-overlay">
+                                <div class="overlay">
+                                    <div class="overlay-inner bg-green opacity-80"></div>
+                                </div>
+
+                                <div class="brand-content text-center">
+                                    <p class="font-white font-bold sm-mb-10">
+                                        Reiss is a UK-based fashion brand and retail store chain.
+                                        The company produces women’s and men’s clothing and sales them in 160 stores in 15 countries.
+                                        Intending to achieve impressive 250 stores worldwide.
+                                    </p>
+
+                                    <p class="font-white">REISS.com</p>
+                                    <a href="http://reiss.com" target="_blank" class="btn btn-sm btn-white">Visit website</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-sm-6 col-md-3 pl-0 pr-0">
+                        <div class="brand-block">
+                            <div class="overlay">
+                                <div class="overlay-inner bg-cover" style="background-image: url('src/img/yang1.jpg');"></div>
+                                <div class="overlay-inner bg-black opacity-50"></div>
+                            </div>
+
+                            <div class="brand-overlay">
+                                <div class="overlay">
+                                    <div class="overlay-inner bg-green opacity-80"></div>
+                                </div>
+
+                                <div class="brand-content text-center">
+                                    <p class="font-white font-bold sm-mb-10">
+                                        Klink is changing the way you get your alcohol. Tell us where you are. Choose what you want.
+                                        Pay through the app. Listen for a knock on your door. And that's all there is to it.
+                                    </p>
+
+                                    <p class="font-white">Klink</p>
+
+                                    <a href="http://klinkdelivery.com" target="_blank" class="btn btn-sm btn-white">Visit website</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-sm-6 col-md-3 pl-0 pr-0">
+                        <div class="brand-block">
+                            <div class="overlay">
+                                <div class="overlay-inner bg-cover" style="background-image: url('src/img/yang3.jpg')"></div>
+                                <div class="overlay-inner bg-black opacity-50"></div>
+                            </div>
+
+                            <div class="brand-overlay">
+                                <div class="overlay">
+                                    <div class="overlay-inner bg-green opacity-80"></div>
+                                </div>
+
+                                <div class="brand-content text-center">
+                                    <p class="font-white font-bold sm-mb-10">
+                                        Ovidias is famous far and wide because of its Belgian chocolates with home-made filling, with a full and creamy taste.
+                                        First retailer that offers chocolates in cans. Based only on the very best ingredients.
+                                    </p>
+
+                                    <p class="font-white">Ovidias.com</p>
+
+                                    <a class="btn btn-sm btn-white" href="http://ovidias.com" target="_blank">Visit website</a>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-sm-6 col-md-3 pl-0 pr-0">
+                        <div class="brand-block">
+                            <div class="overlay">
+                                <div class="overlay-inner bg-cover" style="background-image: url('src/img/yang4.jpg')"></div>
+                                <div class="overlay-inner bg-black opacity-50"></div>
+                            </div>
+
+                            <div class="brand-overlay">
+                                <div class="overlay">
+                                    <div class="overlay-inner bg-green opacity-80"></div>
+                                </div>
+
+                                <div class="brand-content text-center">
+                                    <p class="font-white font-bold sm-mb-10">
+                                        Your Unbiased Source on Nutrition and Supplements.
+                                        Independent and objective. Over 1.5 million examine.com visitors
+                                        every month rely on its research and make change in their diet and daily routine.
+                                    </p>
+
+                                    <p class="font-white">Examine.com</p>
+
+                                    <a class="btn btn-sm btn-white" href="https://examine.com" target="_blank">Visit website</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row">
+
+                    <div class="col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1 col-md-6 col-md-offset-0 text-center md-pt-80 md-pb-80 md-br xs-mb-50 sm-mb-50 md-mb-0">
+                        <div class="row">
+                            <div class="col-md-10 col-md-offset-1">
+                                <div class="icon-container icon-h-100">
+                                    <img src="src/img/read/icon-laptop.png" alt="icon">
+                                </div>
+                                <h2>Business</h2>
+                                <p class="font-grey font-lh-20 sm-mb-30">
+                                    Sylius provides all features necessary for successful growth of your business.
+                                    High quality of code enables easy integrations and allows for unique design of your eCommerce website.
+                                </p>
+                                <a href="https://sylius.org/features/business" class="btn">Read more</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1 col-md-6 col-md-offset-0 text-center md-pt-80 md-pb-80">
+                        <div class="row">
+                            <div class="col-md-6 col-md-offset-3">
+                                <div class="icon-container icon-h-100">
+                                    <img src="src/img/read/icon-code.png">
+                                </div>
+                                <h2>Developer</h2>
+                                <p class="font-grey font-lh-20 sm-mb-30">
+                                    Sylius is the best eCommerce framework based on Symfony. Just enjoy being a developer again.
+                                </p>
+                                <a href="" alt="https://sylius.org/features/developer" class="btn">Read more</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="section community">
+            <div class="overlay">
+                <div class="overlay-inner bg-cover" style="background-image: url('src/img/yang6.jpg')"></div>
+                <div class="overlay-inner bg-black opacity-80"></div>
+            </div>
+            <div class="container font-white">
+                <div class="row sm-mb-50">
+                    <div class="col-md-10 col-md-offset-1 text-center">
+                        <h1>Community</h1>
+                        <p class="font-lh-20">
+                            Sylius is fully Open Source, released under the most permissive MIT license.
+                            Our community of passionate developers and merchants works hard to provide the best eCommerce technology in the world.
+                        </p>
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-md-10 col-md-offset-1">
+                        <div class="row">
+                            <div class="col-sm-6 col-md-3 sm-mb-50 text-center">
+                                <div class="icon-container icon-h-50">
+                                    <img src="src/img/community/icon-commits.png" alt="Commits">
+                                </div>
+                                <h3 class="font-bold mb-0">15 000+</h3>
+                                <p class="opacity-50">Commits</p>
+                            </div>
+
+                            <div class="col-sm-6 col-md-3 sm-mb-50 text-center">
+                                <div class="icon-container icon-h-50">
+                                    <img src="src/img/community/icon-contributors.png" alt="Contributors">
+                                </div>
+                                <h3 class="font-bold mb-0">393</h3>
+                                <p class="opacity-50">Contributors</p>
+                            </div>
+
+                            <div class="col-sm-6 col-md-3 sm-mb-50 text-center">
+                                <div class="icon-container icon-h-50">
+                                    <img src="src/img/community/icon-translators.png" alt="Translators">
+                                </div>
+                                <h3 class="font-bold mb-0">660</h3>
+                                <p class="opacity-50">Translators</p>
+                            </div>
+
+                            <div class="col-sm-6 col-md-3 sm-mb-50 text-center">
+                                <div class="icon-container icon-h-50">
+                                    <img src="src/img/community/icon-github-stars.png" alt="GitHub Stars">
+                                </div>
+                                <h3 class="font-bold mb-0">3 077</h3>
+                                <p class="opacity-50">GiyHub Stars</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-10 col-md-offset-1">
+                        <div class="row">
+                            <div class="col-sm-6 col-md-4 text-center">
+                                <div class="icon-container icon-h-50">
+                                    <img src="src/img/community/icon-github-forks.png" alt="GitHub Forks">
+                                </div>
+                                <h3 class="font-bold mb-0">1 121</h3>
+                                <p class="opacity-50">GitHub Forks</p>
+                            </div>
+
+                            <div class="col-sm-6 col-md-4 text-center">
+                                <div class="icon-container icon-h-50">
+                                    <img src="src/img/community/icon-downloads.png" alt="Downloads">
+                                </div>
+                                <h3 class="font-bold mb-0">3 750 000</h3>
+                                <p class="opacity-50">Downloads</p>
+                            </div>
+
+                            <div class="col-sm-12 col-md-4 text-center">
+                                <div class="icon-container icon-h-50">
+                                    <img src="src/img/community/icon-downloads.png" alt="Last 30 days Downloads">
+                                </div>
+                                <h3 class="font-bold mb-0">100 000</h3>
+                                <p class="opacity-50">Last 30 days Downloads</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section xs-pb-0 sm-pb-0  testimonials">
+            <div class="container">
+                <h2 class="text-center xs-mb-30 sm-mb-50">Testimonials</h2>
+            </div>
+
+            <div class="row testimonials--list">
+                <div class="owl-carousel owl-theme owl-loaded"></div>
+            </div>
+        </section>
+
+        <section class="section blog">
+            <div class="container">
+                <h2 class="text-center xs-mb-30 sm-mb-50">Blog</h2>
+                <div class="row xs-mb-30 sm-mb-50">
+                    <div class="col-sm-6 col-md-3">
+                        <article class="blog--post post--simple">
+                            <a href="http://sylius.org/blog/sylius-v1-0-0-beta-3-now-available">
+                                <div class="post--cover" style="background-image: url('src/img/yang8.jpg')">
+                                    <div class="cover--overlay"></div>
+                                </div>
+                            </a>
+
+                            <p class="post--date">25/07/2017</p>
+                            <h5 class="xs-mb-10 sm-mb-10">
+                                <a href="http://sylius.org/blog/sylius-v1-0-0-beta-3-now-available">Sylius v1.0.0-beta.3 Now Available!</a>
+                            </h5>
+
+                            <p class="post--content">
+                                The last release before stable version of Sylius is out.
+                                Find out what is new and check out the roadmap for the next months.
+                            </p>
+                        </article>
+                    </div>
+
+                    <div class="col-sm-6 col-md-3">
+                        <atricle class="blog--post post--simple">
+                            <a href="http://sylius.org/blog/new-sylius-api-for-modern-ecommerce-web-apps-spa-pwa"></a>
+                            <div class="post--cover" style="background-image: url('src/img/yang9.jpg')">
+                                <div class="cover--overlay"></div>
+                            </div>
+                            <p class="post--date">10/07/2017</p>
+                            <h5 class="xs-mb-10 sm-mb-10">
+                                <a href="http://sylius.org/blog/new-sylius-api-for-modern-ecommerce-web-apps-spa-pwa">
+                                    New Sylius API For Modern eCommerce Web Apps (SPA/PWA)
+                                </a>
+                            </h5>
+
+                            <p class="post--content">
+                                We have a really strong belief that the next-generation eCommerce platform is not the one with all possible features,
+                                but the one that integrates with the best tools in the category. Read our latest blog post and find out why Sylius
+                                ShopApiPlugin is our another step in the direction of modern eCommerce projects with separate frontend applications.
+                            </p>
+                        </atricle>
+                    </div>
+
+                    <div class="col-sm-6 col-md-3">
+                        <article class="blog--post post--simple">
+                            <a href="http://sylius.org/blog/sylius-croatia-meetup-2-summary">
+                                <div class="post--cover" style="background-image: url('src/img/yang10.jpg')">
+                                    <div class="cover--overlay"></div>
+                                </div>
+                            </a>
+
+                            <p class="post--date">22/06/2017</p>
+
+                            <h5 class="xs-mb-10 sm-mb-10">
+                                <a href="http://sylius.org/blog/sylius-croatia-meetup-2-summary">
+                                    Sylius Croatia Meetup #2 Summary
+                                </a>
+                            </h5>
+
+                            <p class="post--content">
+                                A week after our second Sylius Meetup in Croatia,
+                                we can already say with full confidence: We have the best Open Source community!
+                                Read more about lectures, BBQ and workshops that took place in Zagreb.
+                            </p>
+                        </article>
+                    </div>
+
+                    <div class="col-sm-6 col-md-3">
+                        <article class="blog--post post--simple">
+                            <a href="http://sylius.org/blog/sylius-croatia-2017">
+                                <div class="post--cover" style="background-image: url('src/img/yang11.jpg')">
+                                    <div class="cover--overlay"></div>
+                                </div>
+                            </a>
+                            <p class="post--date">25/05/2017</p>
+                            <h5 class="xs-mb-10 sm-mb-10">
+                                <a href="http://sylius.org/blog/sylius-croatia-2017">
+                                    Sylius Croatia 2017
+                                </a>
+                            </h5>
+                            <p class="post--content">
+                                After successful travel to Berlin, Sylius is going to conquer Croatia.
+                                Come to Zagreb on 14th of June and meet our team at Sylius & Symfony Croatia 2017 Meetup,
+                                organised by our friends from Netgen & Locastic.
+                            </p>
+                        </article>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container text-center">
+                <a class="btn" href="http://sylius.org/blog">Visit our blog</a>
+            </div>
+        </section>
+
+        <section class="section bg-grey text-center">
+            <div class="container">
+                <h2 class="sm-mb-20">Powered by Sylius</h2>
+                <div class="row">
+                    <div class="col-md-12 clients-list">
+                        <a href="https://www.reiss.com/eu/" target="_blank">
+                            <img src="src/img/clientList/reiss-logo.png" alt="Reiss">
+                        </a>
+
+                        <a href="https://klinkdelivery.com/" target="_blank">
+                            <img src="src/img/clientList/klink-logo.png" alt="Klink">
+                        </a>
+
+                        <a href="https://www.ovidias.com/en-gb/" target="_blank">
+                            <img src="src/img/clientList/ovidias-logo.png" alt="Ovidias">
+                        </a>
+
+                        <a href="https://examine.com/" target="_blank">
+                            <img src="src/img/clientList/examine.com-logo.png" alt="examine.com">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="site-footer footer-lh-20">
+            <div class="footer-base">
+                <div class="footer--newsletter">
+                    <div class="container">
+                        <div class="row row-lg-flex">
+                            <div class="col-lg-2 font-white xs-mb-30 xs-text-center sm-mb-10">
+                                <h2 class="mt-0 mb-0">Newsletter</h2>
+                            </div>
+                            <div class="col-lg-5 font-white xs-mb-30 xs-text-center sm-mb-30 lg-mb-0">
+                                <p class="mb-0">Want to get updates about Sylius? Subscribe to our newsletter now!</p>
+                            </div>
+                            <div class="col-lg-5">
+                                <form class="" action="//sylius.us14.list-manage.com/subscribe/post?u=a089c9427604503581b994422&id=ff59a2b24e"
+                                      target="_blank" method="post" name="newsletter_form">
+                                    <div class="row">
+                                        <div class="col-md-8 xs-mb-10 sm-mb-10 md-mb-0">
+                                            <input class="form-control alt" type="email" name="EMAIL" placeholder="Enter your email address">
+                                        </div>
+                                        <div class="col-md-4">
+                                            <button type="submit" class="btn btn-fullWidth">Subscribe!</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="footer-informations">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-12 col-md-3 ">
+                                <div class="col-sm-6 col-md-12 xs-text-center">
+                                    <div class="row">
+                                        <div class="col-xs-12 footer-logo">
+                                            <img src="src/img/logo/logo.svg">
+                                        </div>
+                                        <div class="col-xs-12">
+                                            <div class="content-item">
+                                                <span>
+                                                    <i  class="fa fa-map-marker"></i>
+                                                </span>
+                                                ul. Tymienieckiego 18/59<br>
+                                                90-349 Łódź, Poland<br>
+                                                VAT PL7282723120<br>
+                                            </div>
+                                            <div class="content-item">
+                                                <span>
+                                                    <i class="fa fa-phone"></i>
+                                                </span>
+                                                <a href="tel:+48 792 663 272" target="_blank">+48 792 663 272</a>
+                                            </div>
+                                            <div class="content-item">
+                                                <span>
+                                                    <i class="fa fa-envelope"></i>
+                                                </span>
+                                                <a href="mailto:contact@sylius.com" target="_blank">contact@sylius.com</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="col-sm-6 col-md-12 xs-text-center xs-mt-30 sm-mt-0 md-mt-30">
+                                    <div class="row">
+                                        <div class="col-xs-12">
+                                            <p class="footer-title">Stay Connected</p>
+                                            <nav class='footer-nav'>
+                                                <ul>
+                                                    <li><a href="http://twitter.com/Sylius" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                                                    <li><a href="http://facebook.com/SyliusEcommerce" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                                                    <li><a href="http://linkedin.com/company/sylius" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                                                    <li><a href="http://sylius.org/slack" target="_blank"><i class="fa fa-slack"></i></a></li>
+                                                    <li><a href="http://github.com/Sylius/Sylius" target="_blank"><i class="fa fa-github"></i></a></li>
+                                                </ul>
+                                            </nav>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-9">
+                                <div class="row">
+                                    <div class="col-md-6 sm-mb-30 md-mb-0 xs-text-center">
+                                        <div class="row">
+                                            <div class="col-sm-4 xs-text-center xs-mb-30">
+                                                <h3 class="alt mb-0"><a href="#">Features</a></h3>
+                                                <ul class="footer--vertical-menu">
+                                                    <li><a href="http://sylius.org/features/business">Business</a></li>
+                                                    <li><a href="http://sylius.org/features/developer">Developer</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-sm-4 xs-text-center xs-mb-30">
+                                                <h3 class="alt mb-0"><a href="http://sylius.org/services">Services</a></h3>
+                                            </div>
+                                            <div class="col-sm-4 xs-text-center xs-mb-30">
+                                                <h3 class="alt mb-0"><a href="http://sylius.org/developers">Developers</a></h3>
+                                                <ul class="footer--vertical-menu">
+                                                    <li><a href="http://sylius.org/download">Download</a></li>
+                                                    <li><a href="http://docs.sylius.org">Demo</a></li>
+                                                    <li><a href="http://sylius.org/features/business" target="_blank">Documentation</a></li>
+                                                    <li><a href="http://docs.sylius.org/en/latest/contributing/index.html" target="_blank">Contribute</a></li>
+                                                    <li><a href="http://docs.sylius.org/en/latest/customization/index.html" target="_blank">>Customize</a></li>
+                                                    <li><a href="http://translate.sylius.org" target="_blank">>Translate</a></li>
+                                                    <li><a href="http://github.com/Sylius/Sylius/issues/new" target="_blank">Report a Bug</a></li>
+                                                    <li><a href="http://github.com/Sylius/Sylius/milestones" target="_blank">Roadmap</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 xs-text-center">
+                                        <div class="row">
+                                            <div class="col-sm-4 xs-text-center xs-mb-30">
+                                                <h3 class="alt mb-0"><a href="http://sylius.org/partners/become-a-partner">Partners</a></h3>
+                                                <ul class="footer--vertical-menu">
+                                                    <li><a href="http://sylius.org/partners/become-a-partner">Become a partner</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-sm-4 xs-text-center xs-mb-30">
+                                                <h3 class="alt mb-0"><a href="http://sylius.org/company">Company</a></h3>
+                                                <ul class="footer--vertical-menu">
+                                                    <li><a href="http://sylius.org/company#about">About</a></li>
+                                                    <li><a href="http://sylius.org/company#team">Team</a></li>
+                                                    <li><a href="http://sylius.org/contact">Contact</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-sm-4 xs-text-center xs-mb-30">
+                                                <h3 class="alt sm-mb-30"><a href="http://sylius.org/showcase">Showcase</a></h3>
+                                                <h3 class="alt sm-mb-30"><a href="http://sylius.org/blog">Blog</a></h3>
+                                                <h3 class="alt mb-0"><a href="http://sylius.org//contact">Contact Us</a></h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-5 xs-text-center sm-text-center xs-mb-10 sm-mb-10 md-mb-0">
+                            <p>
+                                © Sylius 2014 – 2017. Sylius ® is a registered trademark of
+                                <a href="http://pjedrzejewski.com" target="_blank"><strong>Paweł Jędrzejewski</strong></a>
+                            </p>
+                        </div>
+
+                        <div class="col-sm-12 col-md-2 text-center">
+                            <p>
+                                Made with
+                                <i class="fa fa-heart"></i>
+                                in Łódź!
+                            </p>
+                        </div>
+                        <div class="col-md-5"></div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
